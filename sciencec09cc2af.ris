@@ -1,0 +1,94 @@
+TY  - JOUR
+T1  - Constructing high-quality bounding volume hierarchies for -body computation using the acceptance volume heuristic
+JO  - Astronomy and Computing
+VL  - 22
+IS  - 
+SP  - 1
+EP  - 8
+PY  - 2018/1//
+T2  - 
+AU  - Olsson, O.
+SN  - 2213-1337
+DO  - https://doi.org/10.1016/j.ascom.2017.11.001
+UR  - https://www.sciencedirect.com/science/article/pii/S2213133717301129
+KW  - N  -body
+KW  - BVH
+KW  - GPU
+KW  - Heuristic
+AB  - Abstract
+We present a novel heuristic derived from a probabilistic cost model for approximate N -body simulations. We show that this new heuristic can be used to guide tree construction towards higher quality trees with improved performance over current N -body codes. This represents an important step beyond the current practice of using spatial partitioning for N -body simulations, and enables adoption of a range of state-of-the-art algorithms developed for computer graphics applications to yield further improvements in N -body simulation performance. We outline directions for further developments and review the most promising such algorithms.
+ER  - 
+
+TY  - JOUR
+T1  - FLaapLUC: A pipeline for the generation of prompt alerts on transient Fermi-LAT -ray sources
+JO  - Astronomy and Computing
+VL  - 22
+IS  - 
+SP  - 9
+EP  - 15
+PY  - 2018/1//
+T2  - 
+AU  - Lenain, J.-P.
+SN  - 2213-1337
+DO  - https://doi.org/10.1016/j.ascom.2017.11.002
+UR  - https://www.sciencedirect.com/science/article/pii/S221313371730121X
+KW  - Methods: data analysis
+KW  - Methods: numerical
+KW  - Gamma rays: general
+KW  - Galaxies: active
+AB  - Abstract
+The large majority of high energy sources detected with Fermi-LAT are blazars, which are known to be very variable sources. High cadence long-term monitoring simultaneously at different wavelengths being prohibitive, the study of their transient activities can help shedding light on our understanding of these objects. The early detection of such potentially fast transient events is the key for triggering follow-up observations at other wavelengths. A Python tool, FLaapLUC, built on top of the Science Tools provided by the Fermi Science Support Center and the Fermi-LAT collaboration, has been developed using a simple aperture photometry approach. This tool can effectively detect relative flux variations in a set of predefined sources and alert potential users. Such alerts can then be used to trigger target of opportunity observations with other facilities. It is shown that FLaapLUC is an efficient tool to reveal transient events in Fermi-LAT data, providing quick results which can be used to promptly organise follow-up observations. Results from this simple aperture photometry method are also compared to full likelihood analyses. The FLaapLUC package is made available on GitHub and is open to contributions by the community.
+ER  - 
+
+TY  - JOUR
+T1  - Multi-GPU maximum entropy image synthesis for radio astronomy
+JO  - Astronomy and Computing
+VL  - 22
+IS  - 
+SP  - 16
+EP  - 27
+PY  - 2018/1//
+T2  - 
+AU  - Cárcamo, M.
+AU  - Román, P.E.
+AU  - Casassus, S.
+AU  - Moral, V.
+AU  - Rannou, F.R.
+SN  - 2213-1337
+DO  - https://doi.org/10.1016/j.ascom.2017.11.003
+UR  - https://www.sciencedirect.com/science/article/pii/S2213133717300094
+KW  - Maximum entropy
+KW  - GPU
+KW  - ALMA
+KW  - Inverse problem
+KW  - Radio interferometry
+KW  - Image synthesis
+AB  - Abstract
+The maximum entropy method (MEM) is a well known deconvolution technique in radio-interferometry. This method solves a non-linear optimization problem with an entropy regularization term. Other heuristics such as CLEAN are faster but highly user dependent. Nevertheless, MEM has the following advantages: it is unsupervised, it has a statistical basis, it has a better resolution and better image quality under certain conditions. This work presents a high performance GPU version of non-gridding MEM, which is tested using real and simulated data. We propose a single-GPU and a multi-GPU implementation for single and multi-spectral data, respectively. We also make use of the Peer-to-Peer and Unified Virtual Addressing features of newer GPUs which allows to exploit transparently and efficiently multiple GPUs. Several ALMA data sets are used to demonstrate the effectiveness in imaging and to evaluate GPU performance. The results show that a speedup from 1000 to 5000 times faster than a sequential version can be achieved, depending on data and image size. This allows to reconstruct the HD142527 CO(6-5) short baseline data set in 2.1 min, instead of 2.5 days that takes a sequential version on CPU.
+ER  - 
+
+TY  - JOUR
+T1  - VaST: A variability search toolkit
+JO  - Astronomy and Computing
+VL  - 22
+IS  - 
+SP  - 28
+EP  - 47
+PY  - 2018/1//
+T2  - 
+AU  - Sokolovsky, K.V.
+AU  - Lebedev, A.A.
+SN  - 2213-1337
+DO  - https://doi.org/10.1016/j.ascom.2017.12.001
+UR  - https://www.sciencedirect.com/science/article/pii/S2213133717300501
+KW  - Methods
+KW  - Data analysis
+KW  - Techniques
+KW  - Photometric
+KW  - Stars
+KW  - Variables
+AB  - Abstract
+Variability Search Toolkit (VaST) is a software package designed to find variable objects in a series of sky images. It can be run from a script or interactively using its graphical interface. VaST relies on source list matching as opposed to image subtraction. SExtractor is used to generate source lists and perform aperture or PSF-fitting photometry (with PSFEx). Variability indices that characterize scatter and smoothness of a lightcurve are computed for all objects. Candidate variables are identified as objects having high variability index values compared to other objects of similar brightness. The two distinguishing features of VaST are its ability to perform accurate aperture photometry of images obtained with non-linear detectors and handle complex image distortions. The software has been successfully applied to images obtained with telescopes ranging from 0.08 to 2.5 m in diameter equipped with a variety of detectors including CCD, CMOS, MIC and photographic plates. About 1800 variable stars have been discovered with VaST. It is used as a transient detection engine in the New Milky Way (NMW) nova patrol. The code is written in C and can be easily compiled on the majority of UNIX-like systems. VaST is free software available at http://scan.sai.msu.ru/vast/.
+ER  - 
+
+

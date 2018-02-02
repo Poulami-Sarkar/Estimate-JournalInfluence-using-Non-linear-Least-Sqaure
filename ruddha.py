@@ -12,6 +12,6 @@ for rid in df.iloc[:,4]:
     soup = BeautifulSoup(page, 'lxml')
     email = soup.find(id='ProfileView_researcher_email')
     if(email):
-	    print(email.labe;)
-    else:
+	    print(email.label)
+    #else:
 	#no email present

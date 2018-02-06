@@ -1,14 +1,22 @@
-x<-c(2014,2015,2016)
-y<-c(1.64,1.959,2.008)
-data<-data.frame(x,y)
-library(minpack.lm)
-b1<-min(y)
-a1<-max(y)-min(y)
-plot(x,y)
+data=read.csv("/home/poulami/Documents/Github/JournalInfluence/temp.csv")
+x =c(data$cites)
+y =c(data$influence)
+z=c(data$history)
+d<-data.frame(x,y,z)
+#library(minpack.lm)
+#b1<-min(y)
+#a1<-max(y)-min(y)
+#plot(x,y)
 
-model = nls(y~a*exp(r*x)+b*exp(-r*x),data= data, start=list(a=min(y),b=max(y)-min(y),r=sqrt(b1^2-a1^2)))
+model = nls(y~a*x+b*z,data= d)
+new.data <- data.frame(x=seq(min(x),max(x)),len = 100)
 
 #model<-nls(y~a*exp(-r*x)+b*exp(r*x))
-#cor(y,predict(model))
+print(cor(y,predict(model)))
+print(confint(model))
+lines(new.data$x,new.data$z,predict(model,newdata = new.data))
 
+
+
+      
 

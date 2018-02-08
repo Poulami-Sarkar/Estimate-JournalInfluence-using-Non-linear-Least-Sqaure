@@ -1,22 +1,30 @@
+library(plot3D)
 data=read.csv("/home/poulami/Documents/Github/JournalInfluence/temp.csv")
-x =c(data$cites)
-y =c(data$influence)
-z=c(data$history)
+print(data)
+x =c(data$current)
+z =c(data$influence)
+y=c(data$history)
 d<-data.frame(x,y,z)
 #library(minpack.lm)
 #b1<-min(y)
 #a1<-max(y)-min(y)
-#plot(x,y)
+plot(x,z)
+#lines(x,z)
 
-model = nls(y~a*x+b*z,data= d)
-new.data <- data.frame(x=seq(min(x),max(x)),len = 100)
-
-#model<-nls(y~a*exp(-r*x)+b*exp(r*x))
-print(cor(y,predict(model)))
+model = nls(z~a*x+b*y,data= d)
 print(confint(model))
-lines(new.data$x,new.data$z,predict(model,newdata = new.data))
 
+new.data <- data.frame(x=seq(min(x),max(x)),len = 100)
+print(model)
+#model<-nls(y~a*exp(-r*x)+b*exp(r*x))
+print(cor(z,predict(model)))
+print(confint(model))
+#lines(new.data$x,new.data$z,predict(model,newdata = new.data))
+lines(x,predict(model))
 
-
-      
+#lines(x, predict(model, list(x)), lwd=3, col="red")
+#scatter3D(x = data$current, y = data$history,z = data$influence)
+#print(predict(model))
+#lines3D(x, y, z)
+#lines3D(x,y ,predict(model))
 

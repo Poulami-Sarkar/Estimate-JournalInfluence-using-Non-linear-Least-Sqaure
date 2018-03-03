@@ -1,5 +1,5 @@
 library(plot3D)
-data=read.csv("/home/poulami/Documents/Github/JournalInfluence/dataFiles/temp.csv")
+data=read.csv("/home/poulami/Documents/Github/JournalInfluence/temp.csv")
 print(data)
 x =c(data$current)
 z =c(data$change_of_influence)

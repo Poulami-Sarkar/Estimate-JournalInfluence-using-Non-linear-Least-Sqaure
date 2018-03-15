@@ -1,15 +1,19 @@
-import urllib.request
+import requests
+import pandas as pd
 from bs4 import BeautifulSoup
-
-url = "https://scholar.google.com/citations?user=W2AZCyWMhCoC"
-
-#soup = BeautifulSoup(url) 
-page = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(page,'lxml')
-tbody = soup.find(id="gsc_a_b")
-table = tbody.find_all(class_="gsc_a_tr")
-#print(table.find(class_='gsc_y'))
-for row in tbody.find_all(class_="gsc_a_tr"):
-    citation = soup.find(class_='gsc_c')
-    year = soup.find(class_='gsc_y')
-    print(year)
+import re
+data = pd.DataFrame()
+for i in range(1,24):
+    url = "https://www.sciencedirect.com/journal/astronomy-and-computing/vol/"+str(i)+"/suppl/C"
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, 'lxml')
+    count =0
+    if (r.status_code == 200):
+        for article in soup.find_all(class_ = "js-article-list-item article-item u-padding-top-xs u-margin-bottom-m"):
+            count = count +1; 
+        data = data.append({
+            'date':re.findall('\((.*?)\)',soup.find(class_="js-issue-status text-s").get_text()),
+            'volume':i,
+            'articles':count},ignore_index=True)
+print(data)
+data.to_csv("/home/poulami/Documents/Github/JournalInfluence/dataFiles/publisher.csv")

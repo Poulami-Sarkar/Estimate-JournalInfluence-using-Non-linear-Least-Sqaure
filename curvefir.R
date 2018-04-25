@@ -18,7 +18,9 @@ print(confint(model))
 ## influence VS citations
 plot(x,z,col="blue",xlab="citations",ylab="influence")
 lines(x,predict(model),lwd=1,xlab="ciataions",ylab="influence")
-
+open3d()
+plot3d(x, year, z, col = rainbow(1000))
+lines(x,year,predict(model),lwd=1,xlab="ciataions",ytab='year',zlab="influence")
 #influence VS time(years)
 plot(year,data$change_of_influence,lwd=2,col="purple",xlab="year",ylab="influence")
 lines(year,predict(model),lwd=1)

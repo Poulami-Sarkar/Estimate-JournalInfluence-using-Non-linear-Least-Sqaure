@@ -1,0 +1,62 @@
+---
+title: "Visualizations"
+output: html_notebook
+---
+
+Slope of the curve depends on the value of r and const i.e(In our paper it depends on c/k). In the simple case since we assume a symmetric influence, we can safely conclude that if either the historic influence or the current influence of the journal is high then the journal is most likely going to see a further increased in influence in the bear future.
+The following graphs demonstrate this.
+
+r<<c/k
+
+```{r}
+r = runif(1)
+s = runif(1)
+const = runif(1)
+print(r)
+print(s)
+print(const)
+#p <- (exp(r*x)+const)/exp(r*x)
+curve((exp(r*x)*s*x+const)/exp(r*x), -10,10,add=TRUE)
+```
+r>c/k
+
+
+```{r}
+r = runif(1)
+s = runif(1)
+const = runif(1)
+print(r)
+print(s)
+print(const)
+#p <- (exp(r*x)+const)/exp(r*x)
+curve((exp(r*x)*s*x+const)/exp(r*x), -10,10,add=TRUE)
+```
+r<c/k
+```{r}
+
+r = runif(1)
+s = runif(1)
+const = runif(1)
+print(r)
+print(s)
+print(const)
+#p <- (exp(r*x)+const)/exp(r*x)
+curve((exp(r*x)*s*x+const)/exp(r*x), -10,10,add=TRUE)
+```
+
+r>>c/k
+```{r}
+r = runif(1)
+s = runif(1)
+const = runif(1)
+print(r)
+#r = 0.1715303
+print(s)
+#s = 0.5407635
+#const = 0.5407635
+print(const)
+#p <- (exp(r*x)+const)/exp(r*x)
+curve((exp(r*x)*s*x+const)/exp(r*x), -10,10,add=TRUE)
+```
+
+

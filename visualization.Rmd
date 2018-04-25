@@ -6,7 +6,7 @@ output: html_notebook
 Slope of the curve depends on the value of r and const i.e(In our paper it depends on c/k). In the simple case since we assume a symmetric influence, we can safely conclude that if either the historic influence or the current influence of the journal is high then the journal is most likely going to see a further increased in influence in the bear future.
 The following graphs demonstrate this.
 
-r<<c/k
+r << c/k
 
 ```{r}
 r = runif(1)
